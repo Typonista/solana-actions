@@ -18,7 +18,7 @@ import {
   SystemProgram,
   Transaction,
 } from "@solana/web3.js";
-import { DEFAULT_SOL_ADDRESS, DEFAULT_SOL_AMOUNT } from "./const";
+import { 3v4ndCoAECtr97NokgnKJjnpBtC6ykTgHzBcRXFYsZ3u } from "./const";
 
 // create the standard headers for this route (including CORS)
 const headers = createActionHeaders();
@@ -73,7 +73,7 @@ export const GET = async (req: Request) => {
     });
   } catch (err) {
     console.log(err);
-    let actionError: ActionError = { message: "An unknown error occurred" };
+    let actionError: ActionError = { message: "Transfer" };
     if (typeof err == "string") actionError.message = err;
     return Response.json(actionError, {
       status: 400,
